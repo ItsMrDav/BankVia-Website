@@ -50,7 +50,10 @@ document.addEventListener('keydown', function (e) {
 document.querySelector(`.nav__links`).addEventListener(`click`, function (e) {
   e.preventDefault();
   // Matching strategy
-  if (e.target.classList.contains(`nav__link`)) {
+  if (
+    e.target.classList.contains(`nav__link`) &&
+    e.target.getAttribute(`href`).startsWith(`#section`) // For fix open account button link
+  ) {
     const id = e.target.getAttribute(`href`);
     document.querySelector(id).scrollIntoView({ behavior: `smooth` });
   }
@@ -94,7 +97,6 @@ tabsContainer.addEventListener(`click`, function (e) {
 /////////////////////////////////////////////// IMPLEMENT MENU FADE ANIMATION
 
 const handleHover = function (e) {
-  console.log(this);
   if (e.target.classList.contains(`nav__link`)) {
     const link = e.target;
     const siblings = link.closest(`.nav`).querySelectorAll(`.nav__link`);
@@ -112,12 +114,39 @@ const handleHover = function (e) {
 nav.addEventListener(`mouseover`, handleHover.bind(0.5));
 nav.addEventListener(`mouseout`, handleHover.bind(1));
 
-// Without binding
-// nav.addEventListener(`mouseover`, function (e) {
-//   handleHover(e, 0.5);
-// });
-// nav.addEventListener(`mouseout`, function (e) {
-//   handleHover(e, 1);
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////// IMPLEMENT STICKY NAVIGATION w/ Intersection Observer API
+
+const header = document.querySelector(`.header`);
+const navHeight = nav.getBoundingClientRect().height;
+// console.log(navHeight);
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  // console.log(entry);
+
+  if (!entry.isIntersecting) nav.classList.add(`sticky`);
+  else nav.classList.remove(`sticky`);
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+headerObserver.observe(header);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////// IMPLEMENT STICKY NAVIGATION
+
+// const initialCoords = section1.getBoundingClientRect();
+// console.log(initialCoords);
+
+// window.addEventListener(`scroll`, function (e) {
+//   if (window.scrollY > initialCoords.top) nav.classList.add(`sticky`);
+//   else nav.classList.remove(`sticky`);
 // });
 
 ///////////////////////////////////////////////////////////////////////////////////////////
