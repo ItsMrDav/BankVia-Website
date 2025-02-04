@@ -9,6 +9,10 @@ const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const btnSCrollTo = document.querySelector(`.btn--scroll-to`);
 const section1 = document.querySelector(`#section--1`);
+const tabs = document.querySelectorAll(`.operations__tab`);
+const tabsContainer = document.querySelector(`.operations__tab-container`);
+const tabsContent = document.querySelectorAll(`.operations__content`);
+const nav = document.querySelector(`.nav`);
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -35,6 +39,7 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////// IMPLEMENT SMOOTH PAGE NAVIGATION with (scrollIntoView() function)
@@ -53,7 +58,7 @@ document.querySelector(`.nav__links`).addEventListener(`click`, function (e) {
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////// IMPLEMENT SMOOTH BUTTON NAVIGATION with (scrollIntoView() function)
+////////////////////////// IMPLEMENT SMOOTH LEARN MORE BUTTON NAVIGATION with (scrollIntoView() function)
 
 btnSCrollTo.addEventListener(`click`, function (e) {
   section1.scrollIntoView({ behavior: `smooth` });
@@ -62,10 +67,6 @@ btnSCrollTo.addEventListener(`click`, function (e) {
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////// IMPLEMENT TABBED COMPONENT
-
-const tabs = document.querySelectorAll(`.operations__tab`);
-const tabsContainer = document.querySelector(`.operations__tab-container`);
-const tabsContent = document.querySelectorAll(`.operations__content`);
 
 tabsContainer.addEventListener(`click`, function (e) {
   const clicked = e.target.closest(`.operations__tab`);
@@ -87,6 +88,37 @@ tabsContainer.addEventListener(`click`, function (e) {
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add(`operations__content--active`);
 });
+
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////// IMPLEMENT MENU FADE ANIMATION
+
+const handleHover = function (e) {
+  console.log(this);
+  if (e.target.classList.contains(`nav__link`)) {
+    const link = e.target;
+    const siblings = link.closest(`.nav`).querySelectorAll(`.nav__link`);
+    const logo = link.closest(`nav`).querySelector(`img`);
+
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+
+// Event handler can only take one argument if more, need to use bind method
+// With binding // Passing an argument(this) into a handler
+nav.addEventListener(`mouseover`, handleHover.bind(0.5));
+nav.addEventListener(`mouseout`, handleHover.bind(1));
+
+// Without binding
+// nav.addEventListener(`mouseover`, function (e) {
+//   handleHover(e, 0.5);
+// });
+// nav.addEventListener(`mouseout`, function (e) {
+//   handleHover(e, 1);
+// });
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
