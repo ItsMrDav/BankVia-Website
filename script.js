@@ -147,9 +147,9 @@ const allSections = document.querySelectorAll(`.section`);
 
 // 3. Logic with Observing
 const revealSection = function (entries, observer) {
-  console.log(entries);
+  // console.log(entries);
   entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
+    if (!entry.isIntersecting) return; // guard clause
     entry.target.classList.remove(`section--hidden`);
     observer.unobserve(entry.target);
   });
@@ -165,6 +165,34 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add(`section--hidden`);
 });
+
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////// IMPLEMENT LAZY LOADING IMAGES
+
+const imgTargets = document.querySelectorAll(`img[data-src]`);
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return; // guard clause
+  // Replace src with data-src
+  entry.target.src = entry.target.dataset.src;
+  // Waiting load and then remove blurring class
+  entry.target.addEventListener(`load`, function () {
+    entry.target.classList.remove(`lazy-img`);
+  });
+  // Stopping observer
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: `200px`,
+});
+
+imgTargets.forEach(img => imgObserver.observe(img));
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////
