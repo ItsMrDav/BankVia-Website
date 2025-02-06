@@ -12,30 +12,33 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>BankVia Website</title>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header class="header">
       <nav class="nav">
-        <img
-          src="img/logo.png"
-          alt="Bankist logo"
-          class="nav__logo"
-          id="logo"
-          data-version-number="3.0"
-        />
+        <a href="#">
+          <img
+            src="img/logo.png"
+            alt="Bankist logo"
+            class="nav__logo"
+            id="logo"
+            data-version-number="3.0"
+          />
+        </a>
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="#section--1">Features</a>
+            <a class="nav__link" href="#section--1">Explore</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--2">Operations</a>
+            <a class="nav__link" href="#section--2">Manage</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--3">Testimonials</a>
+            <a class="nav__link" href="#section--3">Trust</a>
           </li>
           <li class="nav__item">
             <a class="nav__link nav__link--btn btn--show-modal" href="#"
-              >Open account</a
+              >Join Us</a
             >
           </li>
         </ul>
@@ -43,14 +46,14 @@
 
       <div class="header__title">
         <h1>
-          When
+          Pure
           <!-- Green highlight effect -->
           <span class="highlight">banking</span>
-          meets<br />
-          <span class="highlight">minimalist</span>
+          maximum<br />
+          <span class="highlight">simplicity</span>
         </h1>
-        <h4>A simpler banking experience for a simpler life.</h4>
-        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+        <h4>The ideal solution for stress-free banking</h4>
+        <button class="btn--text btn--scroll-to">Discover &DownArrow;</button>
         <img
           src="img/hero.png"
           class="header__img"
@@ -61,10 +64,8 @@
 
     <section class="section" id="section--1">
       <div class="section__title">
-        <h2 class="section__description">Features</h2>
-        <h3 class="section__header">
-          Everything you need in a modern bank and more.
-        </h3>
+        <h2 class="section__description">Explore</h2>
+        <h3 class="section__header">The complete modern banking experience</h3>
       </div>
 
       <div class="features">
@@ -80,11 +81,11 @@
               <use xlink:href="img/icons.svg#icon-monitor"></use>
             </svg>
           </div>
-          <h5 class="features__header">100% digital bank</h5>
+          <h5 class="features__header">Fully online bank</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
-            sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
-            debitis ducimus.
+            Bank at your fingertips with seamless digital solutions. Manage
+            finances anytime, anywhere—no branches needed. Enjoy secure, fast,
+            and simple services tailored for you.
           </p>
         </div>
 
@@ -94,11 +95,11 @@
               <use xlink:href="img/icons.svg#icon-trending-up"></use>
             </svg>
           </div>
-          <h5 class="features__header">Watch your money grow</h5>
+          <h5 class="features__header">Build wealth with ease</h5>
           <p>
-            Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
-            inventore ab? Nulla incidunt eius numquam sequi iste pariatur
-            quibusdam!
+            Take charge of your financial future with a fully digital banking
+            experience designed to help you save, invest, and grow your wealth
+            effortlessly—securely and stress-free.
           </p>
         </div>
         <img
@@ -120,11 +121,11 @@
               <use xlink:href="img/icons.svg#icon-credit-card"></use>
             </svg>
           </div>
-          <h5 class="features__header">Free debit card included</h5>
+          <h5 class="features__header">Free access to the account</h5>
           <p>
-            Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
-            eveniet consequatur odit quam quos possimus assumenda dicta fuga
-            inventore ab.
+            Access your account anytime, anywhere, without worrying about fees.
+            Manage your money with ease, from withdrawals to transfers, all with
+            no extra charges.
           </p>
         </div>
       </div>
@@ -132,9 +133,9 @@
 
     <section class="section" id="section--2">
       <div class="section__title">
-        <h2 class="section__description">Operations</h2>
+        <h2 class="section__description">Manage</h2>
         <h3 class="section__header">
-          Everything as simple as possible, but no simpler.
+          Stripping down to simplicity, but keeping the essentials.
         </h3>
       </div>
 
@@ -144,13 +145,13 @@
             class="btn operations__tab operations__tab--1 operations__tab--active"
             data-tab="1"
           >
-            <span>01</span>Instant Transfers
+            <span>01</span>Swift Deposits
           </button>
           <button class="btn operations__tab operations__tab--2" data-tab="2">
-            <span>02</span>Instant Loans
+            <span>02</span>Swift Approvals
           </button>
           <button class="btn operations__tab operations__tab--3" data-tab="3">
-            <span>03</span>Instant Closing
+            <span>03</span>Swift Closures
           </button>
         </div>
 
@@ -163,13 +164,13 @@
             </svg>
           </div>
           <h5 class="operations__header">
-            Tranfser money to anyone, instantly! No fees, no BS.
+            Transfer funds to anyone in seconds—no fees, no gimmicks.
           </h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Transfer funds instantly to anyone, with no fees or hidden charges.
+            Experience the convenience of fast, secure transactions without any
+            unnecessary steps. Whether you're sending money to a friend or
+            paying for a service, it's quick and straightforward.
           </p>
         </div>
 
@@ -180,13 +181,13 @@
             </svg>
           </div>
           <h5 class="operations__header">
-            Buy a home or make your dreams come true, with instant loans.
+            Achieve your home dream or any goal via quick credits.
           </h5>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            Realize your home dream or any other goal with quick credits that
+            offer fast access to funds, clear terms, and no lengthy paperwork.
+            Get the financing you need now and enjoy the flexibility to move
+            forward without waiting.
           </p>
         </div>
 
@@ -197,13 +198,13 @@
             </svg>
           </div>
           <h5 class="operations__header">
-            No longer need your account? No problem! Close it instantly.
+            Don't need your account anymore? Close it, hassle-free.
           </h5>
           <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
+            When you're done with your account, closing it is a breeze. Our
+            quick, secure process ensures your account is closed instantly,
+            without any hassle or long waiting periods. It's simple,
+            straightforward, and completely transparent.
           </p>
         </div>
       </div>
@@ -211,28 +212,29 @@
 
     <section class="section" id="section--3">
       <div class="section__title section__title--testimonials">
-        <h2 class="section__description">Not sure yet?</h2>
+        <h2 class="section__description">Having second thoughts?</h2>
         <h3 class="section__header">
-          Millions of Bankists are already making their lifes simpler.
+          Many are already improving their lives with BanVia.
         </h3>
       </div>
 
       <div class="slider">
         <div class="slide slide--1">
           <div class="testimonial">
-            <h5 class="testimonial__header">Best financial decision ever!</h5>
+            <h5 class="testimonial__header">
+              The most rewarding choice I've made!
+            </h5>
             <blockquote class="testimonial__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Accusantium quas quisquam non? Quas voluptate nulla minima
-              deleniti optio ullam nesciunt, numquam corporis et asperiores
-              laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
-              id alias reiciendis, perferendis facere pariatur dolore veniam
-              autem esse non voluptatem saepe provident nihil molestiae.
+              BanVia has been a game-changer for me! The most rewarding choice
+              I’ve made. The convenience of managing everything digitally is
+              unmatched, and I no longer have to worry about the inefficiencies
+              of traditional banks. It's the future of banking, and I'm so glad
+              I made the change.
             </blockquote>
             <address class="testimonial__author">
               <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Aarav Lynn</h6>
-              <p class="testimonial__location">San Francisco, USA</p>
+              <h6 class="testimonial__name">Chris Miller</h6>
+              <p class="testimonial__location">Rome, Italy</p>
             </address>
           </div>
         </div>
@@ -240,19 +242,19 @@
         <div class="slide slide--2">
           <div class="testimonial">
             <h5 class="testimonial__header">
-              The last step to becoming a complete minimalist
+              The ultimate step in embracing minimalism
             </h5>
             <blockquote class="testimonial__text">
-              Quisquam itaque deserunt ullam, quia ea repellendus provident,
-              ducimus neque ipsam modi voluptatibus doloremque, corrupti
-              laborum. Incidunt numquam perferendis veritatis neque repellendus.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
-              deserunt exercitationem deleniti.
+              Switching to BanVia was the ultimate step in embracing minimalism.
+              It helped me eliminate the clutter of old banking systems,
+              streamline my finances, and focus on what really matters. Now,
+              managing everything digitally is effortless and
+              stress-free—exactly what I've been looking for!
             </blockquote>
             <address class="testimonial__author">
               <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Miyah Miles</h6>
-              <p class="testimonial__location">London, UK</p>
+              <h6 class="testimonial__name">Anna Bauer</h6>
+              <p class="testimonial__location">Vienna, Austria</p>
             </address>
           </div>
         </div>
@@ -260,28 +262,24 @@
         <div class="slide slide--3">
           <div class="testimonial">
             <h5 class="testimonial__header">
-              Finally free from old-school banks
+              No more dealing with old-fashioned banks
             </h5>
             <blockquote class="testimonial__text">
-              Debitis, nihil sit minus suscipit magni aperiam vel tenetur
-              incidunt commodi architecto numquam omnis nulla autem,
-              necessitatibus blanditiis modi similique quidem. Odio aliquam
-              culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
-              deleniti saepe aliquid quos inventore sequi. Necessitatibus id
-              alias reiciendis, perferendis facere.
+              BanVia has been a game-changer for me. No more dealing with
+              old-fashioned banks and their frustrating processes. From fast
+              loan approvals to easy transfers, everything is handled digitally
+              and efficiently. I no longer waste time with paperwork or waiting
+              in lines. Managing my finances has never been simpler or more
+              convenient!
             </blockquote>
             <address class="testimonial__author">
               <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Francisco Gomes</h6>
-              <p class="testimonial__location">Lisbon, Portugal</p>
+              <h6 class="testimonial__name">Luca Rossi</h6>
+              <p class="testimonial__location">Illinois, US</p>
             </address>
           </div>
         </div>
 
-        <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
-        <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
-        <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
-        <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
         <button class="slider__btn slider__btn--left">&larr;</button>
         <button class="slider__btn slider__btn--right">&rarr;</button>
         <div class="dots"></div>
@@ -291,44 +289,45 @@
     <section class="section section--sign-up">
       <div class="section__title">
         <h3 class="section__header">
-          The best day to join BanVia was one year ago. The second best is
-          today!
+          The top day to join BanVia was one year ago. The next best is now!
         </h3>
       </div>
-      <button class="btn btn--show-modal">Open your free account today!</button>
+      <button class="btn btn--show-modal">
+        Join us and open an account now!
+      </button>
     </section>
 
     <footer class="footer">
       <ul class="footer__nav">
         <li class="footer__item">
-          <a class="footer__link" href="#">About</a>
+          <a class="footer__link" href="#">Our Story</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Pricing</a>
+          <a class="footer__link" href="#">Plans & Rates</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Terms of Use</a>
+          <a class="footer__link" href="#">User Agreement</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Privacy Policy</a>
+          <a class="footer__link" href="#">Data Protection</a>
         </li>
         <li class="footer__item">
           <a class="footer__link" href="#">Careers</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Blog</a>
+          <a class="footer__link" href="#">Insights & News</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Contact Us</a>
+          <a class="footer__link" href="#">Get in Touch</a>
         </li>
       </ul>
-      <img src="img/icon.png" alt="Logo" class="footer__logo" />
+      <a href="#"><img src="img/icon.png" alt="Logo" class="footer__logo" /></a>
       <p class="footer__copyright">
-        &copy; Copyright by
+        &copy; Built by
         <a
           class="footer__link twitter-link"
           target="_blank"
-          href="https://twitter.com/jonasschmedtman"
+          href="https://www.linkedin.com/in/davut-simsek/"
           >Davut Simsek</a
         >
       </p>
@@ -337,8 +336,8 @@
     <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
-        Open your bank account <br />
-        in just <span class="highlight">5 minutes</span>
+        Get your bank account <br />
+        started <span class="highlight">right away.</span>
       </h2>
       <form class="modal__form">
         <label>First Name</label>
@@ -347,11 +346,9 @@
         <input type="text" />
         <label>Email Address</label>
         <input type="email" />
-        <button class="btn">Next step &rarr;</button>
+        <button class="btn">Next move &rarr;</button>
       </form>
     </div>
     <div class="overlay hidden"></div>
-
-    <script src="script.js"></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 /* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
 
 :root {
-  --color-primary: #5ec576;
+  /* --color-primary: #5ec576;
   --color-secondary: #ffcb03;
   --color-tertiary: #ff585f;
   --color-primary-darker: #4bbb7d;
@@ -11,7 +11,27 @@
   --color-secondary-opacity: #ffcd0331;
   --color-tertiary-opacity: #ff58602d;
   --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
-  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03); */
+
+  --color-primary: #1abc9c; /* Bright teal */
+  --color-secondary: #e74c3c; /* Bold red */
+  --color-tertiary: #f39c12; /* Vibrant yellow */
+  --color-primary-darker: #16a085; /* Darker teal */
+  --color-secondary-darker: #c0392b; /* Darker red */
+  --color-tertiary-darker: #e67e22; /* Darker yellow */
+  --color-primary-opacity: #1abc9c66; /* Semi-transparent teal */
+  --color-secondary-opacity: #e74c3c66; /* Semi-transparent red */
+  --color-tertiary-opacity: #f39c1266; /* Semi-transparent yellow */
+  --gradient-primary: linear-gradient(
+    to top left,
+    #1abc9c,
+    #16a085
+  ); /* Teal gradient */
+  --gradient-secondary: linear-gradient(
+    to top left,
+    #e74c3c,
+    #c0392b
+  ); /* Red gradient */
 }
 
 * {
@@ -23,6 +43,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -458,7 +479,7 @@ h4 {
 }
 
 .dots__dot--active {
-  /* background-color: #fff; */
+  /* background-color: #fff;  */
   background-color: #888;
   opacity: 1;
 }
